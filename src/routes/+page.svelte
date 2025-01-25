@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { KPZCategory } from "../utils/KPZEntities";
+    import type { KZPCategory } from "../utils/KZPEntities";
     import Form from "./Form.svelte";
     export let data;
-    const categories: KPZCategory[] = data.categories;
+    const categories: KZPCategory[] = data.kzpData.categories;
 </script>
 
-<h1>KPZ - Stazepo</h1>
+<h1>KZP - Stazepo</h1>
 <Form {categories} />

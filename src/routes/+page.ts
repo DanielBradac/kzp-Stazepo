@@ -1,22 +1,27 @@
-import { KPZCategory, KPZSection } from '../utils/KPZEntities';
-import configJson from '$lib/config.json';
+import { KZPCategory, KZPSection, KZPData } from '../utils/KZPEntities'
+import configJson from '$lib/config.json'
+import { error as svelteError } from '@sveltejs/kit';
 
 
 export const load = async () => {
     try {
-        let categories: KPZCategory[] = []
-        for (let category of configJson) {
-            let sections: KPZSection[] = []
-            for (let section of category.sections) {
-                sections.push(new KPZSection(section.id, section.inspectionName, section.regulation, section.frequency, section.performer, section.record))
+        const categories: KZPCategory[] = []
+        for (const category of configJson) {
+            const sections: KZPSection[] = []
+            for (const section of category.sections) {
+                sections.push(new KZPSection(section.id, section.inspectionName, section.regulation, section.frequency, section.performer, section.record))
             }
 
-            categories.push(new KPZCategory(category.id, category.name, sections))
+            categories.push(new KZPCategory(category.id, category.name, sections))
         }
 
-        return { categories: categories }
-    } catch (error) {
-        console.error('Error reading config data:', error)
-        return { categories: [] }
+        return { kzpData: new KZPData(categories) }
+    } catch (e: unknown) {
+        const errorMessage = e instanceof Error ? e.message : 'Neznámá chyba'
+
+        console.log(errorMessage)
+        return svelteError(500, {
+            message: errorMessage
+        })
     }
 }

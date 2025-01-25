@@ -1,10 +1,11 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "name": "Safety Inspections",
+        "skibid": "bhca",
         "sections": [
             {
-                "id": 101,
+                "id": "1.1",
                 "inspectionName": "Fire Safety",
                 "regulation": "NFPA 101",
                 "frequency": "Monthly",
@@ -12,7 +13,7 @@
                 "record": "Verified all fire extinguishers"
             },
             {
-                "id": 102,
+                "id": "1.2",
                 "inspectionName": "Electrical Safety",
                 "regulation": "OSHA 1910",
                 "frequency": "Quarterly",
@@ -21,13 +22,12 @@
             }
         ]
     },
-    
     {
-        "id": 2,
-        "name": "Maintenance Checks",
+        "id": "2",
+        "name": "Maintenance Checksěščřžýýá",
         "sections": [
             {
-                "id": 201,
+                "id": "2.1",
                 "inspectionName": "HVAC System",
                 "regulation": "ASHRAE Standard",
                 "frequency": "Bi-Annual",
@@ -35,7 +35,7 @@
                 "record": "Cleaned and inspected filters"
             },
             {
-                "id": 202,
+                "id": "2.2",
                 "inspectionName": "Plumbing System",
                 "regulation": "UPC Guidelines",
                 "frequency": "Annual",
