@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Safety Inspections",
+        "sections": [
+            {
+                "id": 101,
+                "inspectionName": "Fire Safety",
+                "regulation": "NFPA 101",
+                "frequency": "Monthly",
+                "performer": "John Doe",
+                "record": "Verified all fire extinguishers"
+            },
+            {
+                "id": 102,
+                "inspectionName": "Electrical Safety",
+                "regulation": "OSHA 1910",
+                "frequency": "Quarterly",
+                "performer": "Jane Smith",
+                "record": "Checked all wiring and circuits"
+            }
+        ]
+    },
+    
+    {
+        "id": 2,
+        "name": "Maintenance Checks",
+        "sections": [
+            {
+                "id": 201,
+                "inspectionName": "HVAC System",
+                "regulation": "ASHRAE Standard",
+                "frequency": "Bi-Annual",
+                "performer": "Alex Brown",
+                "record": "Cleaned and inspected filters"
+            },
+            {
+                "id": 202,
+                "inspectionName": "Plumbing System",
+                "regulation": "UPC Guidelines",
+                "frequency": "Annual",
+                "performer": "Chris Green",
+                "record": "Checked for leaks and water pressure"
+            }
+        ]
+    }
+]
