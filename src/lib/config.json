@@ -1,46 +1,231 @@
 [
     {
         "id": "1",
-        "name": "Safety Inspections",
-        "skibid": "bhca",
+        "name": "ZEMNÍ PRÁCE",
         "sections": [
             {
                 "id": "1.1",
-                "inspectionName": "Fire Safety",
-                "regulation": "NFPA 101",
-                "frequency": "Monthly",
-                "performer": "John Doe",
-                "record": "Verified all fire extinguishers"
+                "inspectionName": "Kontrola směrového a výškového vytyčení",
+                "regulation": "dle PD",
+                "frequency": "každá figura",
+                "performer": "Stavbyvedoucí",
+                "record": "SD"
             },
             {
                 "id": "1.2",
-                "inspectionName": "Electrical Safety",
-                "regulation": "OSHA 1910",
-                "frequency": "Quarterly",
-                "performer": "Jane Smith",
-                "record": "Checked all wiring and circuits"
+                "inspectionName": "Geometrický tvar výkopu",
+                "regulation": "PD, ČSN",
+                "frequency": "každá figura",
+                "performer": "Stavbyvedoucí, TDI",
+                "record": "SD"
+            },
+            {
+                "id": "1.3",
+                "inspectionName": "Kontrola zeminy základové spáry a srovnání skutečných vlastností s geolog. posudkem",
+                "regulation": "PD",
+                "frequency": "každá figura",
+                "performer": "Stavbyvedoucí, TDI, geolog",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "1.4",
+                "inspectionName": "Kontrola tloušťky hutněných vrstev",
+                "regulation": "dle PD a hutn.prostředku",
+                "frequency": "průběžně",
+                "performer": "Stavbyvedoucí, TDI",
+                "record": "SD"
+            },
+            {
+                "id": "1.5",
+                "inspectionName": "Vhodnost použitého materiálu",
+                "regulation": "dle PD",
+                "frequency": "před zahájením, při změně",
+                "performer": "TDI, geolog",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "1.6",
+                "inspectionName": "Zkouška zhutnění",
+                "regulation": "ČSN",
+                "frequency": "500m3",
+                "performer": "autoriz. zkušebna",
+                "record": "protokol SD, KZP"
             }
         ]
     },
     {
         "id": "2",
-        "name": "Maintenance Checksěščřžýýá",
+        "name": "ZÁKLADY",
         "sections": [
             {
                 "id": "2.1",
-                "inspectionName": "HVAC System",
-                "regulation": "ASHRAE Standard",
-                "frequency": "Bi-Annual",
-                "performer": "Alex Brown",
-                "record": "Cleaned and inspected filters"
+                "inspectionName": "Tvar základů",
+                "regulation": "PD",
+                "frequency": "průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
             },
             {
                 "id": "2.2",
-                "inspectionName": "Plumbing System",
-                "regulation": "UPC Guidelines",
-                "frequency": "Annual",
-                "performer": "Chris Green",
-                "record": "Checked for leaks and water pressure"
+                "inspectionName": "Bednění: tuhost, prostupy",
+                "regulation": "dozor",
+                "frequency": "průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "KZP"
+            },
+            {
+                "id": "2.3",
+                "inspectionName": "Čistota základové spáry",
+                "regulation": "vizuál.kontrola",
+                "frequency": "před betonáží",
+                "performer": "stavbyvedoucí",
+                "record": "KZP"
+            },
+            {
+                "id": "2.4",
+                "inspectionName": "Výztuž: druh, čistota, způsob uložení",
+                "regulation": "PD,ČSN, vizuál.kontrola",
+                "frequency": "každá dodávka průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP hutní atest"
+            },
+            {
+                "id": "2.5",
+                "inspectionName": "Kontrola betonu",
+                "regulation": "PD,ČSN 732400",
+                "frequency": "200m3",
+                "performer": "autoriz.zkušebna",
+                "record": "protokol"
+            },
+            {
+                "id": "2.6",
+                "inspectionName": "Ošetřování čerstvého betonu",
+                "regulation": "vizuál.kontrola měření teplot",
+                "frequency": "Průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "VNITŘNÍ KANALIZACE",
+        "sections": [
+            {
+                "id": "3.1",
+                "inspectionName": "Bezvadnost materiálu, těsnění",
+                "regulation": "doklad o jakosti",
+                "frequency": "každá dodávka",
+                "performer": "stavbyvedoucí",
+                "record": "atest"
+            },
+            {
+                "id": "3.2",
+                "inspectionName": "Kontrola spádu",
+                "regulation": "PD vizuální kontrola",
+                "frequency": "průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "KZP"
+            },
+            {
+                "id": "3.3",
+                "inspectionName": "Zkouška těsnosti",
+                "regulation": "ČSN",
+                "frequency": "všechny větve",
+                "performer": "stavbyvedoucí nebo subdodavatel, TDI",
+                "record": "SD, KZP"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "CEMENTOVÉ POTĚRY",
+        "sections": [
+            {
+                "id": "4.1",
+                "inspectionName": "Kontrola betonu",
+                "regulation": "ČSN",
+                "frequency": "1x1000m2",
+                "performer": "autoriz.zkušebna",
+                "record": "protokol, KZP"
+            },
+            {
+                "id": "4.2",
+                "inspectionName": "Rovinnost povrchu",
+                "regulation": "ČSN vizuál. kontrola",
+                "frequency": "průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "4.3",
+                "inspectionName": "Dilatační a pracovní spáry",
+                "regulation": "vizuál. kontrola",
+                "frequency": "průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "4.4",
+                "inspectionName": "Ošetřování",
+                "regulation": "vizuál. kontrola",
+                "frequency": "průběžně",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "IZOLACE PROTI VODĚ A VLHKOSTI (ASFALTOVÉ, PVC)",
+        "sections": [
+            {
+                "id": "5.1",
+                "inspectionName": "Podklad: rovinnost, čistota",
+                "regulation": "vizuál.kontrola",
+                "frequency": "před zahájením",
+                "performer": "stavbyvedoucí příp.subdodavatel",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "5.2",
+                "inspectionName": "Materiál izolace",
+                "regulation": "PD doklady o jakosti",
+                "frequency": "každá dodávka",
+                "performer": "stavbyvedoucí příp.subdodavatel",
+                "record": "doklad"
+            },
+            {
+                "id": "5.3",
+                "inspectionName": "Správnost provedení, spoje, dodržení vrstev",
+                "regulation": "PD,ČSN, vizuál.kontrola",
+                "frequency": "po dokončení",
+                "performer": "stavbyvedoucí příp.subdodavatel",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "5.4",
+                "inspectionName": "Prostupy přes izolaci",
+                "regulation": "vizuál.kontrola",
+                "frequency": "po dokončení",
+                "performer": "stavbyvedoucí příp.subdodavatel",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "5.5",
+                "inspectionName": "Zkouška těsnosti hydroizolace",
+                "regulation": "vizuál.kontrola zavodněním",
+                "frequency": "po dokončení",
+                "performer": "stavbyvedoucí příp.subdodavatel TDI",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "5.6",
+                "inspectionName": "Podklad: rovinnost, čistota",
+                "regulation": "vizuál.kontrola",
+                "frequency": "před zahájením",
+                "performer": "stavbyvedoucí příp.subdodavatel",
+                "record": "SD, KZP"
             }
         ]
     }
