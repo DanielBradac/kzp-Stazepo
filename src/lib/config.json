@@ -218,14 +218,6 @@
                 "frequency": "po dokončení",
                 "performer": "stavbyvedoucí příp.subdodavatel TDI",
                 "record": "SD, KZP"
-            },
-            {
-                "id": "5.6",
-                "inspectionName": "Podklad: rovinnost, čistota",
-                "regulation": "vizuál.kontrola",
-                "frequency": "před zahájením",
-                "performer": "stavbyvedoucí příp.subdodavatel",
-                "record": "SD, KZP"
             }
         ]
     },
