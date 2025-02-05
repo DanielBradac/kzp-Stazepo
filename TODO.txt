@@ -1,5 +1,4 @@
 tisk dělat na nové stránce, protože u té původní to rozhodí stavy úplně do sraček
 úvodní stránka u tisku
-doplnit configurák
 udělat split screen - vlevo dotazník, vpravo náhled
-dát tomu nějaký heský stylování, stazepo barvy, stazepo logo?
+dát tomu nějaký hezký stylování, stazepo barvy, stazepo logo?
