@@ -218,13 +218,43 @@
                 "frequency": "po dokončení",
                 "performer": "stavbyvedoucí příp.subdodavatel TDI",
                 "record": "SD, KZP"
+            }
+        ]
+    },
+    {
+       "id": "6",
+        "name": "KONSTRUKCE MONOLITICKĚ BETONOVÉ - dřevěné bednění a úpravy ploch po bednění",
+        "sections": [
+            {
+                "id": "6.1",
+                "inspectionName": "Rozměry",
+                "regulation": "PD, ČSN",
+                "frequency": "ucelená část konstrukce",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
             },
             {
-                "id": "5.6",
-                "inspectionName": "Podklad: rovinnost, čistota",
-                "regulation": "vizuál.kontrola",
-                "frequency": "před zahájením",
-                "performer": "stavbyvedoucí příp.subdodavatel",
+                "id": "6.2",
+                "inspectionName": "Tuhost bednění",
+                "regulation": "ČSN 733150",
+                "frequency": "ucelená část konstrukce",
+                "performer": "stavbyvedoucí",
+                "record": "SD,KZP"
+            },
+            {
+                "id": "6.3",
+                "inspectionName": "Prostupy a otvory",
+                "regulation": "PD, kontrol. měření",
+                "frequency": "ucelená část konstrukce",
+                "performer": "stavbyvedoucí",
+                "record": "SD, KZP"
+            },
+            {
+                "id": "6.4",
+                "inspectionName": "lhůty pro demontáž bednění",
+                "regulation": "nedestruktivní odzkoušení, kontrolní krychle",
+                "frequency": "ucelená část konstrukce",
+                "performer": "stavbyvedoucí a oprávněná osoba ke zkouškám",
                 "record": "SD, KZP"
             }
         ]
