@@ -1,16 +1,34 @@
 <script lang="ts">
-    import { KZPCategory } from "../utils/KZPEntities";
+    import { onMount } from "svelte";
+    import type { KZPCategory } from "../../utils/KZPEntities";
     import {
         emptyColsIndexes,
         getHeaderTitles,
         mainHeaderCount,
-    } from "../utils/PDFExport/TableSettings";
+    } from "../../utils/PDFExport/TableSettings";
 
-    export let selectedCategories: KZPCategory[];
+    let selectedCategories: KZPCategory[];
+    let tablesContainer: HTMLDivElement;
     const tableHeaders = getHeaderTitles();
 
-    let tablesContainer: HTMLDivElement;
+    onMount(() => {
+        const data = sessionStorage.getItem("selectedCategories");
+        if (data) {
+            selectedCategories = JSON.parse(data);
+        } else {
+            throw Error("Couldn't read selected catgegories.");
+        }
+        window.print();
+    });
+
+    function onPrintButton() {
+        window.print();
+    }
 </script>
+
+<button onclick={onPrintButton}>Vytisknout</button>
+
+<p>Table of contents TODO</p>
 
 <div bind:this={tablesContainer}>
     {#each selectedCategories as category}
@@ -69,7 +87,21 @@
         border: 1px solid #ddd;
     }
 
-    th {
-        background-color: #f4f4f4;
+    @media print {
+        button {
+            display: none;
+        }
+
+        table {
+            page-break-after: always;
+        }
+
+        p {
+            page-break-after: always;
+        }
+
+        @page {
+            size: landscape;
+        }
     }
 </style>

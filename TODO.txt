@@ -1,4 +1,4 @@
-tisk dělat na nové stránce, protože u té původní to rozhodí stavy úplně do sraček
 úvodní stránka u tisku
+je ok rozdělení tabulky na víc stránek??
 udělat split screen - vlevo dotazník, vpravo náhled
 dát tomu nějaký hezký stylování, stazepo barvy, stazepo logo?

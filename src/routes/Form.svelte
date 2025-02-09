@@ -3,10 +3,9 @@
   import { getSelectedCategoriesFromForm } from "./Form";
   import Table from "./Table.svelte";
 
-  export let categories: KZPCategory[] = [];
+  export let categories: KZPCategory[];
+  export let selectedCategories: KZPCategory[];
 
-  // Reactive variable to store selected categories
-  let selectedCategories: KZPCategory[] = [];
   let form: HTMLFormElement;
 
   $: if (form) {
@@ -42,5 +41,3 @@
     {/if}
   {/each}
 </form>
-
-<Table {selectedCategories} />
