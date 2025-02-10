@@ -60,6 +60,7 @@
         border-collapse: collapse;
         font-family: "Times New Roman", Times, serif;
         text-wrap: auto;
+        margin-bottom: 2em;
     }
 
     th,
