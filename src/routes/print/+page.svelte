@@ -13,19 +13,16 @@
 
     onMount(() => {
         const data = sessionStorage.getItem("selectedCategories");
-        console.log("SessionStorage Data:", data); // Debugging
         if (data) {
             selectedCategories = JSON.parse(data);
         } else {
-            alert(
-                "Couldn't read selected categories. Make sure data is available before printing.",
-            );
+            throw Error("Couldn't read selected catgegories.");
         }
 
-        // Delay pro vercel, který to nestihne načíst
-        setTimeout(() => {
+        // Wait for the next render cycle to print
+        requestAnimationFrame(() => {
             window.print();
-        }, 1000);
+        });
     });
 
     function onPrintButton() {

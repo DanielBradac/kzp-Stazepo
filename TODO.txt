@@ -1,3 +1,4 @@
+ikonka aplikace?
 checknout jestli jsou parametry tý tabulky ok - nejsou některý sloupce moc malý např.?
 stavy u klikání na formulář se chovají divně - nepamatují si zakliknuté podkategorie
 nemělo by to být po rozkliknutí např. zaškrtnuté všechno?
