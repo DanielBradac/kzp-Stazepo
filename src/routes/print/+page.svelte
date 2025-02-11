@@ -18,7 +18,7 @@
         } else {
             throw Error("Couldn't read selected catgegories.");
         }
-
+        setTimeout("printTimeout", 1000);
         window.print();
     });
 
