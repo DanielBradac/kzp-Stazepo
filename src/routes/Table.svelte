@@ -8,13 +8,11 @@
 
     export let selectedCategories: KZPCategory[];
     const tableHeaders = getHeaderTitles();
-
-    let tablesContainer: HTMLDivElement;
 </script>
 
-<div bind:this={tablesContainer}>
+<div>
     {#each selectedCategories as category}
-        <table class="table-pagebreak" border="1">
+        <table border="1">
             <thead>
                 <tr>
                     <th colspan={tableHeaders.length}>
@@ -55,11 +53,9 @@
 
 <style>
     table {
-        width: 100%; /* Uniform table width */
-        table-layout: fixed;
+        width: 100%;
         border-collapse: collapse;
-        font-family: "Times New Roman", Times, serif;
-        text-wrap: auto;
+        font-family: "Poppins", sans-serif;
         margin-bottom: 2em;
     }
 
@@ -67,10 +63,11 @@
     td {
         text-align: left;
         padding: 8px;
-        border: 1px solid #ddd;
+        border: 1px solid #2e7d32;
     }
 
     th {
-        background-color: #f4f4f4;
+        background-color: #e8f5e9;
+        font-weight: bold;
     }
 </style>

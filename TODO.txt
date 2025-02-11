@@ -1,4 +1,3 @@
-úvodní stránka u tisku
-je ok rozdělení tabulky na víc stránek??
-udělat split screen - vlevo dotazník, vpravo náhled
-dát tomu nějaký hezký stylování, stazepo barvy, stazepo logo?
+checknout jestli jsou parametry tý tabulky ok - nejsou některý sloupce moc malý např.?
+stavy u klikání na formulář se chovají divně - nepamatují si zakliknuté podkategorie
+nemělo by to být po rozkliknutí např. zaškrtnuté všechno?

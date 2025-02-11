@@ -1,7 +1,6 @@
 <script lang="ts">
   import { findById, type KZPCategory } from "../utils/KZPEntities";
   import { getSelectedCategoriesFromForm } from "./Form";
-  import Table from "./Table.svelte";
 
   export let categories: KZPCategory[];
   export let selectedCategories: KZPCategory[];
@@ -41,3 +40,14 @@
     {/if}
   {/each}
 </form>
+
+<style>
+  label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+</style>

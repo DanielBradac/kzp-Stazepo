@@ -95,45 +95,85 @@
 </div>
 
 <style>
-    .categoryTable {
-        width: 100%; /* Uniform table width */
-        border-collapse: collapse;
-        font-family: "Times New Roman", Times, serif;
-        text-wrap: auto;
+    :root {
+        --primary-color: #000000; /* Black text */
+        --secondary-color: #ffffff; /* White background */
+        --border-color: #000000; /* Black borders */
+        --text-color: #000000;
+        --font-family: "Poppins", sans-serif;
     }
 
-    .categoryTH,
-    .categoryTD {
-        text-align: left;
-        padding: 4px;
-        border: 1px solid #000000;
+    :global(body) {
+        font-family: var(--font-family);
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 2rem;
     }
 
     h1 {
+        font-size: 2rem;
+        font-weight: bold;
         text-align: center;
-        font-size: 2em;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
     }
 
     h2 {
-        text-align: center;
         font-size: 1.5em;
+        text-align: center;
+        color: var(--primary-color);
     }
 
     h3 {
         font-size: 1.2em;
+        color: var(--primary-color);
     }
 
     .printPage {
         margin-bottom: 2em;
     }
 
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .categoryTable {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--font-family);
+    }
+
+    .categoryTH,
+    .categoryTD {
+        text-align: left;
+        padding: 4px;
+        border: 1px solid var(--border-color);
+    }
+
     button {
         margin-bottom: 2em;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background-color: #333;
     }
 
     @media print {
         .printPage {
             page-break-after: always;
+        }
+
+        .printPage:last-child {
+            page-break-after: avoid; /* Prevents an extra blank page */
         }
 
         button {

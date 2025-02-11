@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
     import type { KZPCategory } from "../utils/KZPEntities";
     import Form from "./Form.svelte";
     import Table from "./Table.svelte";
@@ -31,42 +30,77 @@
 </div>
 
 <style>
+    :root {
+        --primary-color: #2e7d32;
+        --secondary-color: #f1f8e9;
+        --border-color: #c8e6c9;
+        --text-color: #333;
+        --font-family: "Poppins", sans-serif;
+    }
+
+    :global(body) {
+        font-family: var(--font-family);
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 2rem;
+    }
+
     h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
         font-family: "Courier New", Courier, monospace;
-        text-align: left;
-        font-size: 2em;
     }
 
     .mainPage {
         display: flex;
-        gap: 1rem; /* Adds spacing between form and table */
-        height: 80vh; /* Set a fixed height for the scroll effect */
+        gap: 1.5rem;
+        height: 80vh;
     }
 
     .formSection {
-        flex: 0 0 40%; /* Takes 40% of the width */
+        flex: 0 0 40%;
         display: flex;
         flex-direction: column;
     }
 
     .formContainer {
-        flex: 1; /* Allows it to grow while keeping the button at the bottom */
-        overflow: auto; /* Enables scrolling */
-        border: 1px solid #ccc; /* Optional: Adds a border for better visibility */
+        flex: 1;
+        overflow: auto;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        background: white;
         padding: 1rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .printButton {
-        margin-top: 0.5rem;
-        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
         cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .printButton:hover {
+        background-color: #1b5e20;
     }
 
     .tableContainer {
-        flex: 1; /* Takes the remaining 60% */
-        height: 100%; /* Makes it full height */
-        overflow: auto; /* Enables scrolling */
-        border: 1px solid #ccc; /* Optional: Adds a border for better visibility */
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        background: white;
         padding: 1rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 </style>
