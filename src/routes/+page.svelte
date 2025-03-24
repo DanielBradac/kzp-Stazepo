@@ -1,16 +1,18 @@
 <script lang="ts">
     import type { KZPCategory } from "../utils/KZPEntities";
+    import { PrintData } from "../utils/PrintData";
     import Form from "./Form.svelte";
     import Table from "./Table.svelte";
     export let data;
 
     const categories: KZPCategory[] = data.kzpData.categories;
     let selectedCategories: KZPCategory[] = [];
+    let header: string = "";
 
     function routeToPrint() {
         sessionStorage.setItem(
-            "selectedCategories",
-            JSON.stringify(selectedCategories),
+            "printData",
+            JSON.stringify(new PrintData(header, selectedCategories)),
         );
         window.open("/print", "_blank");
     }
@@ -20,7 +22,7 @@
 <div class="mainPage">
     <div class="formSection">
         <div class="formContainer">
-            <Form {categories} bind:selectedCategories />
+            <Form {categories} bind:selectedCategories bind:header />
         </div>
         <button class="printButton" onclick={routeToPrint}>Vytisknout</button>
     </div>

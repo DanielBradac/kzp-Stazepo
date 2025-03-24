@@ -4,6 +4,7 @@
 
   export let categories: KZPCategory[];
   export let selectedCategories: KZPCategory[];
+  export let header: string;
 
   let form: HTMLFormElement;
 
@@ -22,6 +23,11 @@
 </script>
 
 <form method="POST" bind:this={form} onchange={updateSelectedCategories}>
+  <label class="headerLabel">
+    Hlavička:
+    <textarea bind:value={header} maxlength="500"> </textarea>
+  </label><br />
+
   {#each categories as category}
     <label>
       <input type="checkbox" name="name" value={category.id} />
@@ -49,5 +55,17 @@
     max-width: 100%;
     white-space: normal;
     word-break: break-word;
+  }
+
+  .headerLabel {
+    width: 100%;
+    padding-left: 3px;
+  }
+
+  .headerLabel textarea {
+    flex-grow: 0.5;
+    height: 15px;
+    resize: none;
+    resize: vertical;
   }
 </style>

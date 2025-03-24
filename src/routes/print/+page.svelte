@@ -1,22 +1,22 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import type { KZPCategory } from "../../utils/KZPEntities";
     import {
         emptyColsIndexes,
         getHeaderTitles,
         mainHeaderCount,
     } from "../../utils/PDFExport/TableSettings";
+    import type { PrintData } from "../../utils/PrintData";
 
-    let selectedCategories: KZPCategory[];
+    let printData: PrintData;
     let tablesContainer: HTMLDivElement;
     const tableHeaders = getHeaderTitles();
 
     onMount(() => {
-        const data = sessionStorage.getItem("selectedCategories");
+        const data = sessionStorage.getItem("printData");
         if (data) {
-            selectedCategories = JSON.parse(data);
+            printData = JSON.parse(data);
         } else {
-            throw Error("Couldn't read selected catgegories.");
+            throw Error("Couldn't read print data.");
         }
 
         // Wait for the next render cycle to print
@@ -33,11 +33,12 @@
 <div class="printPage">
     <h1>Kontrolní a zkušební plán</h1>
     <h2>(DÍLČÍ ČÁST PLÁNU KVALITY STAVBY)</h2>
+    <p class="header">{@html printData?.header.replace(/\n/g, "<br>") || ""}</p>
     <h3>OBSAH:</h3>
 
     <table>
         <tbody>
-            {#each selectedCategories as category}
+            {#each printData?.categories || [] as category}
                 <tr>
                     <td>{category.id}.</td>
                     <td>{category.name}</td>
@@ -49,7 +50,7 @@
 <button onclick={onPrintButton}>Vytisknout</button>
 
 <div bind:this={tablesContainer}>
-    {#each selectedCategories as category}
+    {#each printData?.categories || [] as category}
         <div class="printPage">
             <table class="categoryTable" border="1">
                 <thead>
@@ -131,6 +132,10 @@
     h3 {
         font-size: 1.2em;
         color: var(--primary-color);
+    }
+
+    .header {
+        font-weight: bold;
     }
 
     .printPage {
